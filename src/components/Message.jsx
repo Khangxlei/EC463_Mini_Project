@@ -38,6 +38,7 @@
 
 // export default Message;
 
+// Import necessary components 
 import React, { useContext, useEffect, useRef } from "react"
 import { AuthContext } from "../context/AuthContext"
 import { ChatContext } from "../context/ChatContext"
@@ -50,6 +51,7 @@ const Message = ({message}) => {
   const ref = useRef()
 
   useEffect(() => { 
+    // Scroll to messages
     ref.current?.scrollIntoView({ behavior: "smooth" })
   }, [message])
 
