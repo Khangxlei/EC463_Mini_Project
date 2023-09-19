@@ -1,3 +1,4 @@
+// Definitions for different screen sizes 
 @mixin mobile {
   @media screen and (max-width: 480px) {
     @content;
@@ -14,8 +15,9 @@
   }
 }
 
+// Styling
 .formContainer {
-  background-color: #a7bcff;
+  background-color: #C3EAFB; /* Light Blue */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -30,35 +32,39 @@
     gap: 10px;
     align-items: center;
 
+    // Logo styling
     .logo {
-      color: #5d5b8d;
+      color: #3A6EA5; /* Dark Blue */
       font-weight: bold;
       font-size: 24px;
-
     }
 
+    // Title styling
     .title {
-      color: #5d5b8d;
+      color: #3A6EA5; /* Dark Blue */
       font-size: 12px;
     }
 
+    // Form elements styling
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
 
+      // Input fields styling
       input {
         padding: 15px;
         border: none;
         width: 250px;
-        border-bottom: 1px solid #a7bcff;
+        border-bottom: 1px solid #C3EAFB; /* Light Blue */
         &::placeholder {
           color: rgb(175, 175, 175);
         }
       }
 
+      // Button styling
       button {
-        background-color: #7b96ec;
+        background-color: #3A6EA5; /* Dark Blue */
         color: white;
         padding: 10px;
         font-weight: bold;
@@ -66,11 +72,12 @@
         cursor: pointer;
       }
 
+      // Label styling
       label {
         display: flex;
         align-items: center;
         gap: 10px;
-        color: #8da4f1;
+        color: #6F9EC7; /* Medium Blue */
         font-size: 12px;
         cursor: pointer;
 
@@ -80,15 +87,16 @@
       }
     }
     p {
-      color: #5d5b8d;
+      color: #3A6EA5; /* Dark Blue */
       font-size: 12px;
       margin-top: 10px;
     }
   }
 }
 
+// Home section styling
 .home {
-  background-color: #a7bcff;
+  background-color: #C3EAFB; /* Light Blue */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -102,22 +110,22 @@
     display: flex;
     overflow: hidden;
     @include tablet {
-     width: 90%;
+      width: 90%;
     }
 
     .sidebar {
       flex: 1;
-      background-color: #3e3c61;
+      background-color: #28527A; /* Medium Blue */
       position: relative;
 
       .navbar {
         display: flex;
         align-items: center;
-        background-color: #2f2d52;
+        background-color: #1D3B59; /* Dark Blue */
         height: 50px;
         padding: 10px;
         justify-content: space-between;
-        color: #ddddf7;
+        color: #C3EAFB; /* Light Blue */
 
         .logo {
           font-weight: bold;
@@ -131,7 +139,7 @@
           gap: 10px;
 
           img {
-            background-color: #ddddf7;
+            background-color: #C3EAFB; /* Light Blue */
             height: 24px;
             width: 24px;
             border-radius: 50%;
@@ -139,8 +147,8 @@
           }
 
           button {
-            background-color: #5d5b8d;
-            color: #ddddf7;
+            background-color: #3A6EA5; /* Dark Blue */
+            color: #C3EAFB; /* Light Blue */
             font-size: 10px;
             border: none;
             cursor: pointer;
@@ -170,6 +178,7 @@
         }
       }
 
+      // User chat input styling
       .userChat {
         padding: 10px;
         display: flex;
@@ -179,7 +188,7 @@
         cursor: pointer;
 
         &:hover {
-          background-color: #2f2d52;
+          background-color: #1D3B59; /* Dark Blue */
         }
 
         img {
@@ -201,12 +210,13 @@
         }
       }
     }
+    // Chat section styling
     .chat {
       flex: 2;
 
       .chatInfo {
         height: 50px;
-        background-color: #5d5b8d;
+        background-color: #6F9EC7; /* Medium Blue */
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -214,6 +224,7 @@
         color: lightgray;
       }
 
+      // Styling for chat messages
       .chatIcons {
         display: flex;
         gap: 10px;
@@ -224,8 +235,9 @@
         }
       }
 
+      // Styling for each message 
       .messages {
-        background-color: #ddddf7;
+        background-color: #cce2ff; /* Light Blue */
         padding: 10px;
         height: calc(100% - 160px);
         overflow: scroll;
@@ -272,7 +284,7 @@
             .messageContent {
               align-items: flex-end;
               p {
-                background-color: #8da4f1;
+                background-color: #3A6EA5; /* Dark Blue */
                 color: white;
                 border-radius: 10px 0px 10px 10px;
               }
@@ -293,7 +305,7 @@
           width: 100%;
           border: none;
           outline: none;
-          color: #2f2d52;
+          color: #28527A; /* Medium Blue */
           font-size: 18px;
 
           &::placeholder {
@@ -315,7 +327,7 @@
             border: none;
             padding: 10px 15px;
             color: white;
-            background-color: #8da4f1;
+            background-color: #3A6EA5; /* Dark Blue */
             cursor: pointer;
           }
         }
