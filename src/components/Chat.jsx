@@ -27,7 +27,7 @@
 
 // export default Chat;
 
-
+// Import the necessary components
 import React, { useContext } from "react";
 import Cam from "../img/cam.png";
 import Add from "../img/add.png";
@@ -37,9 +37,11 @@ import Input from "./Input";
 import { ChatContext } from "../context/ChatContext";
 
 const Chat = () => {
+  // Access chat data 
   const { data } = useContext(ChatContext);
-
+  
   return (
+    // main chat container
     <div className="chat">
       <div className="chatInfo">
         <span>{data.user?.displayName}</span>
