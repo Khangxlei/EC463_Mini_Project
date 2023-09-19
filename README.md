@@ -41,3 +41,10 @@ We decided to make the app predominantly light blue, as that is a nice, eye-plea
 We incorporated image transfers within users' conversations, which can be simply done by clicking the attachment icon and select an image from your local desktop. Real-time messaging is also a feature in our app, as we utilized Firestore Realtime Database which updates user's messages within the database in real-time. Users are also able to search for other users in the system and select whom they would like to talk to. For more information on Firebase Console, please refer to our Github Wiki page. 
 
 
+## Testing and Results
+
+An advantage of working with React.js is the live preview on your browser. This enables us to whenever we change our code, even without saving it, React.js will automatically identify the changes in code and update it accordingly on the live preview. This tremendously helped out with testing and debugging. By thoroughly checking the live preview website, we exercised rigorous tests by:
+
+- Making sure all routes to different pages worked seamlessly.
+- Ensure all functions are working as intended (i.e. search bar searches for people, clicking on a user on the sidebar opens up the conversation, send button sends the message to the user and have it displayed as your own dark blue message compared to the other person which has a white bubble message)
+- Search drop-down: the drop-down should display all people with the same name as the user’s search query, and that it displays their profile picture as well.
