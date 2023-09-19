@@ -43,5 +43,3 @@ function App() {
 }
 
 export default App;
-
-// 45:44
