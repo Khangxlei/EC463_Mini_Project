@@ -1,9 +1,12 @@
 # SW Mini Project
 Objective: Create a chat app using react
+
 Team members: Khang Le and Marybel Boujaoude
 
+Technologies used: React, Visual Studio Code, JavaScript, .css styling files 
+
 ## Description
-The Chat App with React is a real-time messaging application designed to facilitate seamless user communication. Built using the power of React, this app offers a user-friendly interface to make online conversations effortless and enjoyable.
+The Chat App with React is a real-time messaging application that facilitates seamless user communication. Built using the power of React, this app offers a user-friendly interface to make online conversations effortless and enjoyable.
 
 ### Sign-in page: 
 
