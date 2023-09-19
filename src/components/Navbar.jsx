@@ -1,9 +1,11 @@
+// Import necessary components
 import React, { useContext } from 'react'
 import {signOut} from "firebase/auth"
 import { auth } from '../firebase'
 import { AuthContext } from '../context/AuthContext'
 
 const Navbar = () => {
+  // Accessing user information
   const {currentUser} = useContext(AuthContext)
 
   return (
