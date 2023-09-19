@@ -102,33 +102,37 @@
 
 // export default Search;
 
+// Import necessary components 
 import React, { useContext, useState } from 'react'
 import { collection, query, where, getDocs,setDoc, doc, updateDoc, serverTimestamp, getDoc, } from "firebase/firestore";
 import { db } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
 
 const Search = () => {
-  const [username, setUsername] = useState("")
-  const [user, setUser] = useState(null)
-  const [err, setErr] = useState(false)
+  const [username, setUsername] = useState("") // Input name for username search 
+  const [user, setUser] = useState(null) // Stores the user data after searching
+  const [err, setErr] = useState(false) // Handles errors
 
+  // Accessing current user 
   const {currentUser} = useContext(AuthContext)
 
+  // User search function
   const handleSearch = async () => {
     const q = query(collection(db, "users"), where("displayName", "==", username))
 
     try {
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
+        // Storing the found user's data
         setUser(doc.data())
       });
     } catch (err) {
+      // Handles errors
         setErr(true)
     }
   }
 
-  
-
+  // Key press function
   const handleKey = e =>{
     e.code === "Enter" && handleSearch()
   }
@@ -141,8 +145,9 @@ const Search = () => {
       
       
       if (!res.exists()){
+        // Creating a new chat document 
         await setDoc(doc(db, "chats", convoID), { messages: [] })
-
+        // Updates current user's chat collection
         await updateDoc(doc(db, "userChats", currentUser.uid), {
           [convoID + ".userInfo"]: {
             uid: user.uid,
@@ -162,6 +167,7 @@ const Search = () => {
         });
       }
     } 
+      // Clears the user data and input field 
     catch (err) {}
     setUser(null)
     setUsername("")
